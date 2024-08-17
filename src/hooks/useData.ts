@@ -13,6 +13,7 @@ const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig, deps?:
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
+        console.log(requestConfig)
         const controller = new AbortController();
 
         setIsLoading(true)
