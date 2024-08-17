@@ -4,6 +4,7 @@ import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton.tsx";
 import GameCardContainer from "./GameCardContainer.tsx";
 import {Genre} from "../hooks/useGenres.ts";
+import PlatformSelector from "./PlatformSelector.tsx";
 
 interface GameGridProps {
     selectedGenre: Genre | null
@@ -15,7 +16,7 @@ const GameGrid = ({selectedGenre}: GameGridProps) => {
 
     return (
         <>
-            {isLoading ? 'isLoading': 'not loading...'}
+            <PlatformSelector />
             {error && <Text>{error}</Text>}
             <SimpleGrid
                 columns={{
